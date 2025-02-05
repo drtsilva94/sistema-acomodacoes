@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "nome": "Casa de Praia em Florianópolis",
+        "cidade": "Florianópolis",
+        "preco": 500,
+        "imagem": "https://via.placeholder.com/150",
+        "descricao": "Casa aconchegante perto da praia"
+    },
+    {
+        "id": 2,
+        "nome": "Apartamento no Centro de São Paulo",
+        "cidade": "São Paulo",
+        "preco": 300,
+        "imagem": "https://via.placeholder.com/150",
+        "descricao": "Apartamento moderno e bem localizado"
+    }
+]
