@@ -1,18 +1,23 @@
 [
     {
         "id": 1,
-        "nome": "Casa de Praia em Florianópolis",
+        "nome": "Apartamento Luxo no Centro",
         "cidade": "Florianópolis",
-        "preco": 500,
-        "imagem": "https://via.placeholder.com/150",
-        "descricao": "Casa aconchegante perto da praia"
+        "preco": 450.0,
+        "imagem": "link-para-imagem-1"
     },
     {
         "id": 2,
-        "nome": "Apartamento no Centro de São Paulo",
-        "cidade": "São Paulo",
-        "preco": 300,
-        "imagem": "https://via.placeholder.com/150",
-        "descricao": "Apartamento moderno e bem localizado"
+        "nome": "Casa de Praia",
+        "cidade": "Balneário Camboriú",
+        "preco": 600.0,
+        "imagem": "link-para-imagem-2"
+    },
+    {
+        "id": 3,
+        "nome": "Suíte à Beira-mar",
+        "cidade": "Recife",
+        "preco": 550.0,
+        "imagem": "link-para-imagem-suíte"
     }
 ]
