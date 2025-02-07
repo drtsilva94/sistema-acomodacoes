@@ -14,13 +14,6 @@
         "imagem": "assets/praiavistamar.jpg"
     },
     {
-        "id": 3,
-        "nome": "Suíte à Beira-mar - Exclusiva",
-        "cidade": "Recife",
-        "preco": 550.0,
-        "imagem": "assets/suite.jpg"
-    },
-    {
         "id": 4,
         "nome": "Casa Aconchegante no Campo",
         "cidade": "Florianópolis",

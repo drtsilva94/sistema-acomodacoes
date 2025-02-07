@@ -6,9 +6,24 @@ body {
     text-align: center;
 }
 
-h1 {
-    color: #333;
-    margin: 20px 0;
+/* Estilização do header com o campo de busca */
+.main-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: flex-start;
+}
+
+#filtro-cidade {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
 }
 
 .container {
@@ -19,7 +34,7 @@ h1 {
     display: flex;
     gap: 20px;
     justify-content: space-between;
-    height: 100vh;
+    height: calc(100vh - 70px); /* Altura ajustada para incluir o header */
 }
 
 /* Lista de acomodações */
@@ -190,4 +205,24 @@ form button {
     #acomodacoes-lista {
         grid-template-columns: 1fr;
     }
+
+    .main-header {
+        justify-content: center;
+    }
+}
+
+.favoritar-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.favoritar-icon.favorito {
+    color: gold;
+}
+
+.favoritar-icon:hover {
+    color: orange;
 }

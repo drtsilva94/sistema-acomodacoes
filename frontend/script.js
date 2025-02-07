@@ -38,6 +38,9 @@ function carregarAcomodacoes() {
             }
 
             data.forEach(acomodacao => {
+                // Verificar se a acomodação está nos favoritos
+                const isFavorito = verificarFavorito(acomodacao.nome);
+
                 // Criar card de acomodação
                 const card = document.createElement('div');
                 card.className = "acomodacao-card";
@@ -51,6 +54,7 @@ function carregarAcomodacoes() {
                     <p>Preço: R$ ${acomodacao.preco.toFixed(2)}</p>
                     <div class="botoes-acomodacao">
                         <button class="alugar-btn" onclick="alugarAcomodacao('${acomodacao.nome}')">Alugar</button>
+                        <span class="favoritar-icon ${isFavorito ? 'favorito' : ''}" onclick="alternarFavorito('${acomodacao.nome}')">&#9733;</span>
                     </div>
                 `;
                 lista.appendChild(card);
@@ -93,4 +97,29 @@ function obterCoordenadasPorCidade(cidade) {
     };
 
     return coordenadasCidades[cidade] || null;
+}
+
+// Função para verificar se a acomodação já está nos favoritos
+function verificarFavorito(nome) {
+    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+    return favoritos.includes(nome);
+}
+
+// Função para alternar o status de favorito
+function alternarFavorito(nome) {
+    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+    if (favoritos.includes(nome)) {
+        // Se já estiver nos favoritos, remover
+        favoritos = favoritos.filter(favorito => favorito !== nome);
+    } else {
+        // Caso contrário, adicionar aos favoritos
+        favoritos.push(nome);
+    }
+
+    // Atualizar no localStorage
+    localStorage.setItem('favoritos', JSON.stringify(favoritos));
+
+    // Recarregar os cards para refletir a mudança
+    carregarAcomodacoes();
 }

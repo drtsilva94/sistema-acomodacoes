@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Acomodações</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Link para a biblioteca Leaflet.js -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Sistema de Acomodações</h1>
+    <header class="main-header">
+        
+        <input type="text" id="filtro-cidade" placeholder="Buscar por cidade..." oninput="filtrarAcomodacoes()">
+    </header>
 
+    <div class="container">
         <div class="conteudo">
             <!-- Seção de lista de acomodações -->
             <div id="acomodacoes-lista"></div>
@@ -21,9 +23,7 @@
         </div>
     </div>
 
-    <!-- Leaflet.js Script -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="script.js"></script>
-    
 </body>
 </html>
