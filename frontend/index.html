@@ -5,38 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Acomodações</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Link para a biblioteca Leaflet.js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
     <div class="container">
         <h1>Sistema de Acomodações</h1>
 
-        <!-- Botão para adicionar uma nova acomodação -->
-        <button id="adicionar-btn">Adicionar Nova Acomodação</button>
+        <div class="conteudo">
+            <!-- Seção de lista de acomodações -->
+            <div id="acomodacoes-lista"></div>
 
-        <!-- Seção onde a lista de acomodações será exibida dinamicamente -->
-        <div id="acomodacoes-lista"></div>
-    </div>
-
-    <!-- Modal de formulário para adicionar ou editar uma acomodação -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span id="fechar-modal" class="close-btn">&times;</span>
-            <h2 id="modal-titulo">Adicionar Acomodação</h2>
-            <form id="form-acomodacao">
-                <input type="hidden" id="id-acomodacao">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" required>
-                <label for="cidade">Cidade:</label>
-                <input type="text" id="cidade" required>
-                <label for="preco">Preço:</label>
-                <input type="number" id="preco" required>
-                <label for="imagem">URL da Imagem:</label>
-                <input type="text" id="imagem">
-                <button type="submit">Salvar</button>
-            </form>
+            <!-- Mapa ao lado direito -->
+            <div id="mapa"></div>
         </div>
     </div>
 
+    <!-- Leaflet.js Script -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="script.js"></script>
+    
 </body>
 </html>

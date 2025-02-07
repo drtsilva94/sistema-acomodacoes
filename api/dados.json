@@ -4,34 +4,34 @@
         "nome": "Apartamento Luxo no Centro",
         "cidade": "Florianópolis",
         "preco": 450.0,
-        "imagem": "https://example.com/imagem1.jpg"
+        "imagem": "assets/aptoluxo.jpg"
     },
     {
         "id": 2,
         "nome": "Casa de Praia com Vista para o Mar",
         "cidade": "Balneário Camboriú",
         "preco": 600.0,
-        "imagem": "https://example.com/imagem2.jpg"
+        "imagem": "assets/praiavistamar.jpg"
     },
     {
         "id": 3,
         "nome": "Suíte à Beira-mar - Exclusiva",
         "cidade": "Recife",
         "preco": 550.0,
-        "imagem": "https://example.com/imagem3.jpg"
+        "imagem": "assets/suite.jpg"
     },
     {
         "id": 4,
         "nome": "Casa Aconchegante no Campo",
         "cidade": "Florianópolis",
         "preco": 250.0,
-        "imagem": "https://example.com/imagem4.jpg"
+        "imagem": "assets/casacampo.jpg"
     },
     {
         "id": 5,
         "nome": "Casa Grande com 3 Quartos",
         "cidade": "Florianópolis",
         "preco": 320.0,
-        "imagem": "https://example.com/imagem5.jpg"
+        "imagem": "assets/casagrande.jpg"
     }
 ]

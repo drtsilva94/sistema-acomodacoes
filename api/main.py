@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, validator
 from typing import Optional, List
 import json
@@ -14,6 +15,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Monta a pasta de imagens
+app.mount("/assets", StaticFiles(directory="frontend/assets"), name="assets")
 
 # Carrega os dados fictícios de um arquivo JSON com encoding UTF-8
 def carregar_dados():

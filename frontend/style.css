@@ -15,38 +15,59 @@ h1 {
     padding: 20px;
 }
 
-#acomodacoes-lista {
+.conteudo {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 1200px;
+    gap: 20px;
+    justify-content: space-between;
+    height: 100vh;
 }
 
+/* Lista de acomodações */
+#acomodacoes-lista {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-height: 100%;
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+}
+
+/* Estilização dos cards */
 .acomodacao-card {
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    margin: 15px;
     padding: 20px;
-    width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
     text-align: left;
+    transition: transform 0.2s;
+}
+
+.acomodacao-card:hover {
+    transform: translateY(-5px);
 }
 
 .imagem-container {
     width: 100%;
-    height: 180px;
+    height: 200px;
     overflow: hidden;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .imagem-principal {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
+    max-height: 200px;
     border-radius: 8px;
+    display: block;
 }
 
 h3 {
@@ -58,10 +79,6 @@ p {
     color: #555;
     font-size: 14px;
     margin: 5px 0;
-}
-
-.botoes-acomodacao {
-    margin-top: 10px;
 }
 
 button {
@@ -79,22 +96,26 @@ button:hover {
     background-color: #45a049;
 }
 
-.editar-btn {
-    margin-right: 10px;
+/* Estilo do botão de alugar */
+.alugar-btn {
+    background-color: #4CAF50;
+    width: 100%;
 }
 
-.excluir-btn {
-    background-color: #f44336;
+.alugar-btn:hover {
+    background-color: #45a049;
 }
 
-.excluir-btn:hover {
-    background-color: #e53935;
+/* Mapa interativo */
+#mapa {
+    flex: 1;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#adicionar-btn {
-    margin-top: 10px;
-}
-
+/* Modal de formulário */
 .modal {
     display: none;
     position: fixed;
@@ -153,4 +174,20 @@ input:focus {
 
 form button {
     margin-top: 15px;
+}
+
+/* Ajuste de responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    .conteudo {
+        flex-direction: column;
+    }
+
+    #mapa {
+        height: 300px;
+        margin-top: 20px;
+    }
+
+    #acomodacoes-lista {
+        grid-template-columns: 1fr;
+    }
 }
