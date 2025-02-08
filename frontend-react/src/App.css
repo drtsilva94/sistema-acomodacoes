@@ -1,0 +1,73 @@
+.app {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Altura total da viewport */
+  overflow: hidden; /* Impede a rolagem global */
+}
+
+.main-header {
+  padding: 10px;
+  background-color: #4CAF50;
+  display: flex;
+  justify-content: center;
+}
+
+#filtro-cidade {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.conteudo {
+  display: flex;
+  height: calc(100vh - 60px); /* Altura total menos o header */
+  gap: 20px;
+}
+
+#acomodacoes-lista {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  overflow-y: scroll; /* Permite a rolagem vertical */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  scrollbar-width: none; /* Firefox: Oculta a barra de rolagem */
+}
+
+/* Para Chrome, Edge, Safari */
+#acomodacoes-lista::-webkit-scrollbar {
+  display: none;
+}
+
+.mapa {
+  flex: 1;
+  height: 100%; /* O mapa ocupa toda a altura disponível */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do botão Alugar */
+.alugar-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.alugar-btn:hover {
+  background-color: #45a049;
+}

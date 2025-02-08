@@ -8,17 +8,24 @@
     },
     {
         "id": 2,
-        "nome": "Casa de Praia com Vista para o Mar",
-        "cidade": "Balneário Camboriú",
-        "preco": 600.0,
-        "imagem": "assets/praiavistamar.jpg"
+        "nome": "Apartamento no centro",
+        "cidade": "Curitiba",
+        "preco": 210.0,
+        "imagem": "assets/aptocentro.jpg"
+    },
+    {
+        "id": 3,
+        "nome": "Casa no campo",
+        "cidade": "Rio de janeiro",
+        "preco": 210.0,
+        "imagem": "assets/casacampo.jpg"
     },
     {
         "id": 4,
-        "nome": "Casa Aconchegante no Campo",
+        "nome": "Casa com vista para o mar",
         "cidade": "Florianópolis",
-        "preco": 250.0,
-        "imagem": "assets/casacampo.jpg"
+        "preco": 210.0,
+        "imagem": "assets/praiavistamar.jpg"
     },
     {
         "id": 5,
@@ -26,5 +33,33 @@
         "cidade": "Florianópolis",
         "preco": 320.0,
         "imagem": "assets/casagrande.jpg"
+    },
+    {
+        "nome": "Apartamento pequeno",
+        "cidade": "Florianópolis",
+        "preco": 150.0,
+        "imagem": "assets/aptopequeno.jpg",
+        "id": 6
+    },
+    {
+        "nome": "Casa com piscina",
+        "cidade": "São Paulo",
+        "preco": 200.0,
+        "imagem": "assets/casacompiscina.jpg",
+        "id": 7
+    },
+    {
+        "nome": "Chalé",
+        "cidade": "Benedito Novo",
+        "preco": 500.0,
+        "imagem": "assets/chalé.avif",
+        "id": 8
+    },
+    {
+        "nome": "Apartamento em Jurere",
+        "cidade": "Florianópolis",
+        "preco": 350.0,
+        "imagem": "assets/aptojurere.webp",
+        "id": 9
     }
 ]
