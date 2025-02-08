@@ -20,7 +20,9 @@ app.add_middleware(
 )
 
 # Monta a pasta de imagens
-app.mount("/assets", StaticFiles(directory="frontend/assets"), name="assets")
+app.mount("/assets", StaticFiles(directory="frontend-react/public/assets"), name="assets")
+
+
 
 # Configuração da conexão ao MySQL via SQLAlchemy
 DATABASE_URL = "mysql+mysqlconnector://root:Kk2417@localhost/sistema_acomodacoes"
