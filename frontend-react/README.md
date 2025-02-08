@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+# 🏡 Sistema de Acomodações
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação web para listagem de acomodações. Ele utiliza uma API construída com **FastAPI** no back-end e um front-end desenvolvido com **React**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📦 Estrutura do Projeto
 
-### `npm start`
+```plaintext
+sistema-acomodacoes/
+│
+├── api/                 # Back-end (FastAPI)
+│   ├── main.py          # Ponto de entrada da API
+│   ├── models.py        # Definição dos modelos do banco de dados
+│   ├── dados.json       # Dados de exemplo (caso não use o banco)
+│   ├── acomodacoes.db   # Banco de dados SQLite (se preferir essa abordagem)
+│   └── __pycache__/     # Cache do Python
+│
+├── frontend-react/      # Front-end (React)
+│   ├── public/          # Arquivos públicos (imagens, ícones, etc.)
+│   ├── src/             # Código-fonte do React
+│   │   ├── components/  # Componentes reutilizáveis (Card, Mapa, SearchBar)
+│   │   ├── App.js       # Componente principal da aplicação
+│   │   ├── App.css      # Estilização global
+│   │   └── index.js     # Arquivo principal de inicialização
+│
+├── README.md            # Documentação do projeto
+└── .gitignore           # Arquivos a serem ignorados pelo Git
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Como Executar o Projeto Localmente
 
-### `npm test`
+### 1. Clone este repositório:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/seu-usuario/sistema-acomodacoes.git
+```
 
-### `npm run build`
+### 2. Acesse o diretório do projeto:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+cd sistema-acomodacoes
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🔧 Configuração do Back-end (API FastAPI)
 
-### `npm run eject`
+### 1. Acesse o diretório da API:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+cd api
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Crie e ative um ambiente virtual:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+python -m venv env
+source env/bin/activate  # No Windows: .\env\Scripts\activate
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 3. Instale as dependências:
 
-## Learn More
+```bash
+pip install -r requirements.txt
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 4. Inicie a API:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+uvicorn main:app --reload
+```
 
-### Code Splitting
+- Acesse a API no navegador em: [http://127.0.0.1:8000](http://127.0.0.1:8000)  
+- Para a documentação interativa: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🌐 Configuração do Front-end (React)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 1. Acesse o diretório do front-end:
 
-### Making a Progressive Web App
+```bash
+cd frontend-react
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 2. Instale as dependências:
 
-### Advanced Configuration
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 3. Inicie o servidor de desenvolvimento:
 
-### Deployment
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Acesse a aplicação no navegador: [http://localhost:3000](http://localhost:3000)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🛠️ Tecnologias Utilizadas
+
+- **FastAPI** para a criação da API  
+- **React** para o front-end  
+- ****MySQL** para persistência de dados  
+- **Leaflet** para renderização de mapas  
+- **CSS personalizado** para estilização  
+
+---
+
+## 🌱 Como Contribuir
+
+### 1. Faça um fork do repositório:
+
+```bash
+git fork https://github.com/seu-usuario/sistema-acomodacoes.git
+```
+
+### 2. Crie uma nova branch para suas alterações:
+
+```bash
+git checkout -b minha-feature
+```
+
+### 3. Faça suas alterações e crie commits claros:
+
+```bash
+git commit -m "Minha nova feature"
+```
+
+### 4. Envie para o seu repositório forkado:
+
+```bash
+git push origin minha-feature
+```
+
+### 5. Abra um Pull Request neste repositório original.

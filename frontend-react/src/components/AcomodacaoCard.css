@@ -6,8 +6,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
     transition: transform 0.2s;
+    position: relative;
 }
 
 .acomodacao-card:hover {
@@ -43,18 +44,61 @@ p {
     margin: 5px 0;
 }
 
+.acomodacao-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* Botão Alugar centralizado */
 .alugar-btn {
     background-color: #4CAF50;
     color: white;
-    padding: 8px 12px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     transition: background-color 0.3s;
-    margin-top: 10px;
 }
 
 .alugar-btn:hover {
     background-color: #45a049;
+}
+
+/* Estrela no canto inferior direito */
+.estrela-favorito {
+    font-size: 28px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.estrela-favorito.ativo {
+    color: gold;
+}
+
+.alugar-btn {
+    width: 100%;
+    max-width: 150px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.estrela-favorito {
+    font-size: 24px;
+    color: gray;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+.imagem-principal {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 200px;
+    border-radius: 8px;
 }

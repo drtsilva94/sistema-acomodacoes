@@ -35,7 +35,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  overflow-y: scroll; /* Permite a rolagem vertical */
+  overflow-y: auto; /* Permite a rolagem apenas no lado esquerdo */
   padding: 20px;
   background-color: #ffffff;
   border-radius: 5px;
@@ -51,23 +51,60 @@
 .mapa {
   flex: 1;
   height: 100%; /* O mapa ocupa toda a altura disponível */
+  min-width: 300px;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
 }
 
 /* Estilo do botão Alugar */
 .alugar-btn {
   background-color: #4CAF50;
   color: white;
-  padding: 10px;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   transition: background-color 0.3s;
 }
 
 .alugar-btn:hover {
   background-color: #45a049;
+}
+
+/* Estilo da estrela */
+.estrela-favorito {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.estrela-favorito.ativo {
+  color: gold;
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+  .conteudo {
+    flex-direction: column;
+  }
+
+  #acomodacoes-lista {
+    padding: 10px;
+    height: auto;
+  }
+
+  .mapa {
+    height: 300px;
+  }
+
+  .alugar-btn {
+    width: 100%;
+    font-size: 14px;
+  }
 }
