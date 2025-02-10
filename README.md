@@ -35,7 +35,7 @@ sistema-acomodacoes/
 ### 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/sistema-acomodacoes.git
+git clone https://github.com/drtsilva94/sistema-acomodacoes.git
 ```
 
 ### 2. Acesse o diretório do projeto:
@@ -48,30 +48,20 @@ cd sistema-acomodacoes
 
 ## 🔧 Configuração do Back-end (API FastAPI)
 
-### 1. Acesse o diretório da API:
+### 1. Ative o ambiente virtual::
 
 ```bash
-cd api
+env\Scripts\activate  # No Linux/Mac: source env/bin/activate
+
 ```
 
-### 2. Crie e ative um ambiente virtual:
+### 2. Inicie a API:
 
 ```bash
-python -m venv env
-source env/bin/activate  # No Windows: .\env\Scripts\activate
+uvicorn api.main:app --reload
+
 ```
 
-### 3. Instale as dependências:
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Inicie a API:
-
-```bash
-uvicorn main:app --reload
-```
 
 - Acesse a API no navegador em: [http://127.0.0.1:8000](http://127.0.0.1:8000)  
 - Para a documentação interativa: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
@@ -117,7 +107,7 @@ npm start
 ### 1. Faça um fork do repositório:
 
 ```bash
-git fork https://github.com/seu-usuario/sistema-acomodacoes.git
+https://github.com/drtsilva94/sistema-acomodacoes.git
 ```
 
 ### 2. Crie uma nova branch para suas alterações:
